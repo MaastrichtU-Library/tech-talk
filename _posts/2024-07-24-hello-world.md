@@ -19,6 +19,6 @@ Morbi et ligula tincidunt, interdum elit at, iaculis odio. Nullam metus ipsum, c
 Quisque pellentesque leo eget vehicula tempor.
 
 ```python
-a=foo
-b=bar
+a = foo
+b = bar
 ```
