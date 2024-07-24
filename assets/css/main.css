@@ -1713,7 +1713,7 @@ img + small, img + br + small {
     display: inline-block;
     margin-right: 15px;
     margin-left: 15px;
-    width: 380px;
+    /*width: 380px;*/
 }
 .author-box .author-img {
   width: 120px;
