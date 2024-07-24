@@ -1,0 +1,82 @@
+# Site settings
+title: Maastricht University Library Systems
+description: >  # this character allows multiline input
+  Technical blogs for a better digital heritage world.
+baseurl: "/" # the subpath of your site, e.g. /blog
+permalink: ':title:output_ext'
+url: "https://maastrichtu-library.github.io/digitalheritage-tech" # the base hostname & protocol for your site, e.g. http://example.com
+logo: "/assets/img/branding/UM-logo-light.svg"
+logo-icon: "/assets/img/branding/UM-symbol-light.png"
+logo-icon-SEO: "/assets/img/branding/UM-symbol-light.png" # must be a non SVG file
+
+# Night/Dark mode
+# Default mode is "auto", "auto" is for auto nightshift
+# (19:00 - 07:00), "manual" is for manual toggle, and
+# "on/off" is for default on/off.
+#
+# Whatever the user's choice is, it will supersede the
+# default setting of the site and be kept during the
+# visit (session). Only the dark mode setting is "manual",
+# it will be always kept on every visit (i.e. no matter
+# the browser is closed or not)
+night_mode: "auto"
+
+logo-dark: "/assets/img/branding/UM-logo-dark.png"
+highlight_theme: syntax-base16.solarized.dark # select a dark theme for the code highlighter if needed
+
+# Author settings
+author: Maastricht University Library # add your name
+author-pic: ./branding/UM-library-profile-pic.jpg
+about-author: Digital Collections
+
+# Contact links
+email: # Add your Email address
+phone: # Add your Phone number
+website: https://library.maastrichtuniversity.nl # Add your website
+linkedin: maastricht-university-library # Add your Linkedin handle
+github: maastrichtu-library # Add your Github handle
+twitter: 'um_library' # Add your Twitter handle
+bandcamp: # Add your Bandcamp username
+
+# Newsletter
+mailchimp: "https://github.us1.list-manage.com/subscribe/post?u=8ece198b3eb260e6838461a60&amp;id=397d90b5f4"
+
+# Disqus
+discus_identifier:  # Add your discus identifier
+comments_curtain: yes # leave empty to show the disqus embed directly
+
+# Tracker
+analytics:
+fbadmin:
+
+# Paginate
+paginate: 6
+paginate_path: 'page:num'
+words_per_minute: 200
+
+# Build settings
+markdown: kramdown
+mathjax: true
+highlighter: rouge
+compress_html:
+  clippings: all
+  comments: all
+  startings: [html, head, body]
+
+# Outputting
+timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+category_archive:
+  type: liquid
+  path: /categories/
+
+sass:
+  style: compressed
+
+plugins:
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-sitemap
+
+include: [_pages]
+exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock", "package-lock.json", "assets/css/sass/"]
