@@ -1,11 +1,15 @@
 {% assign document = post | default: page %}
-{% if document.read_time or document.show_date %}
+{% if document.read_time or document.show_date or document.author %}
   <span class = "{{ include.type }}">
   {% if include.type == "post-page-meta" %}
     <p class="page_meta">
   {% endif %}
   {% if include.type == "post-card-meta" %}
     <span class="meta-pre"></span>
+  {% endif %}
+  {% if document.author %}
+    by {{document.author}}
+    <span class="meta-sep"></span>
   {% endif %}
   {% unless include.date == "none" %}
     {% if document.show_date and document.date %}
