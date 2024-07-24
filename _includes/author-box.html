@@ -2,24 +2,34 @@
 {% include escape-404.html %}
 <section class="author-box">
   <div class="narrow-column">
-    <a href='{{ site.website }}'><img src="{{ relativebase }}assets/img/{% if site.author-pic %}{{site.author-pic}}{% endif %}" alt="{{ site.author }}" class="author-img"></a>
+    <a href='{{ site.website }}' target="_blank"><img src="{{ relativebase }}assets/img/{% if site.author-pic %}{{site.author-pic}}{% endif %}" alt="{{ site.author }}" class="author-img"></a>
+
+  </div>
+  <div class="author-desc">
+    <h3>{{site.author}}</h3>
+    <p>{{site.about-author}}</p>
     <ul class="contact-icons">
-      {% if site.twitter %}
-      <li class="twitter"><a class="twitter" href="https://twitter.com/{{site.twitter}}" target="_blank"><i class="fa fa-twitter"></i></a></li>
+      {% if site.facebook %}
+      <li class="facebook"><a class="facebook" href="https://facebook.com/{{site.facebook}}" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+      {% endif %}
+      {% if site.instagram %}
+      <li class="instagram"><a class="instagram" href="https://www.instagram.com/{{site.instagram}}" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
       {% endif %}
       {% if site.linkedin %}
-      <li class="linkedin"><a class="linkedin" href="https://in.linkedin.com/in/{{site.linkedin}}" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+      <li class="linkedin"><a class="linkedin" href="https://www.linkedin.com/company/{{site.linkedin}}/?viewAsMember=true" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+      {% endif %}
+      {% if site.twitter %}
+      <li class="twitter"><a class="twitter" href="https://x.com/{{site.twitter}}" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
+      {% endif %}
+      {% if site.twitter %}
+      <li class="twitter"><a class="youtube" href="https://www.youtube.com/channel/{{site.youtube}}" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
       {% endif %}
       {% if site.github %}
-      <li class="github"><a class="github" href="http://github.com/{{site.github}}" target="_blank"><i class="fa fa-github"></i></a></li>
+      <li class="github"><a class="github" href="https://github.com/{{site.github}}" target="_blank"><i class="fa-brands fa-github"></i></a></li>
       {% endif %}
       {% if site.email %}
       <li class="email"><a class="email" href="mailto:{{site.email}}"><i class="fa fa-envelope-o"></i></a></li>
       {% endif %}
     </ul>
-  </div>
-  <div class="author-desc">
-    <h3>{{site.author}}</h3>
-    <p>{{site.about-author}}</p>
   </div>
 </section>
