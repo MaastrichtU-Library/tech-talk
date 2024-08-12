@@ -9,16 +9,25 @@ img: posts/world.jpg
 tags: [general, iiif]
 author: Maarten Coonen
 ---
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed diam iaculis, scelerisque erat vitae, ornare ipsum.
-Mauris vitae mi mattis, feugiat risus et, feugiat ante. Suspendisse eget est ac libero interdum viverra.
 
-> In aliquam bibendum ipsum, non elementum tortor posuere eget. Suspendisse mollis enim tincidunt, efficitur lectus quis,
-euismod quam. Nulla tincidunt erat nisi, et tincidunt libero commodo quis. Morbi non elementum neque, non interdum diam.
+### Hello world
+This is a blog post saying hello
 
-Morbi et ligula tincidunt, interdum elit at, iaculis odio. Nullam metus ipsum, consectetur ac rutrum id, tempus quis ipsum.
-Quisque pellentesque leo eget vehicula tempor.
+It supports quotes
+> To be or not to be.
+> That's the question
+
+We can also write bash code
+```bash
+cd /home/user
+touch myfile
+```
+
+Or Python
 
 ```python
-a = foo
-b = bar
+import os
+os.time()
 ```
+
+That's all folks.
