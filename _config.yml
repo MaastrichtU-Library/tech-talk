@@ -6,7 +6,7 @@ baseurl: "/" # the subpath of your site, e.g. /blog
 permalink: ':title:output_ext'
 url: "https://maastrichtu-library.github.io/digitalheritage-tech" # the base hostname & protocol for your site, e.g. http://example.com
 logo: "/assets/img/branding/UM-logo-light.svg"
-logo-icon: "/assets/img/branding/UM-symbol-light.png"
+logo-icon: "/assets/img/branding/UM-symbol-dark.png"
 logo-icon-SEO: "/assets/img/branding/UM-symbol-light.png" # must be a non SVG file
 
 # Night/Dark mode
@@ -59,7 +59,6 @@ words_per_minute: 200
 # Build settings
 markdown: kramdown
 mathjax: true
-highlighter: rouge
 compress_html:
   clippings: all
   comments: all
