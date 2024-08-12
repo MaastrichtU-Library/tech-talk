@@ -1831,6 +1831,7 @@ img + small, img + br + small {
   position: relative;
   text-align: center;
   padding-bottom: 30px;
+  margin-top: 30px;
   margin-bottom: 30px;
   flex: 1; /* Controls the column width. Here: value 1 */
 }
@@ -1849,6 +1850,8 @@ img + small, img + br + small {
 }
 
 .authors-body {
+  padding-bottom: 30px;
+  margin-top: 5px;
   flex: 3; /* Three times as much space as the authors-header column */
 }
 
