@@ -6,7 +6,7 @@ title: Hello World
 description: Welcome to the first post
 date: 2024-07-24
 img: posts/world.jpg
-tags: [general, iiif]
+tags: [general]
 author: Maarten Coonen
 ---
 
