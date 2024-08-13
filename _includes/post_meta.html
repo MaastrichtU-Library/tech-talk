@@ -7,7 +7,12 @@
   {% if include.type == "post-card-meta" %}
     <span class="meta-pre"></span>
   {% endif %}
-  {% if document.author %}
+  {% if document.author and include.hyperlink == "true" %}
+    <!-- Clickable hyperlink -->
+    by&nbsp;<a href="authors.html#{{document.author}}">{{document.author}}</a>
+    <span class="meta-sep"></span>
+  {% elsif document.author and include.hyperlink != "true" %}
+    <!-- Plain text -->
     by {{document.author}}
     <span class="meta-sep"></span>
   {% endif %}
