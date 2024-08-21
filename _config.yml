@@ -1,10 +1,10 @@
 # Site settings
-title: Maastricht University Library - Digital Heritage
+title: Tech Talk by Maastricht University Library
 description: >  # this character allows multiline input
-  Technical blogs for a better digital heritage world.
+  First-hand stories and experiences by developers from Maastricht University Library.
 baseurl: "/" # the subpath of your site, e.g. /blog
 permalink: ':title:output_ext'
-url: "https://maastrichtu-library.github.io/digitalheritage-tech" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://maastrichtu-library.github.io/tech-talk" # the base hostname & protocol for your site, e.g. http://example.com
 logo: "/assets/img/branding/UM-logo-light.svg"
 logo-icon: "/assets/img/branding/UM-symbol-dark.png"
 logo-icon-SEO: "/assets/img/branding/UM-symbol-light.png" # must be a non SVG file
@@ -27,7 +27,7 @@ highlight_theme: syntax-base16.solarized.dark # select a dark theme for the code
 # Author settings
 author: Maastricht University Library # add your name
 author-pic: ./branding/UM-library-profile-pic.jpg
-about-author: Digital Collections
+about-author: Library Systems and Development
 
 # Contact links
 email: # Add your Email address
