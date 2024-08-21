@@ -829,6 +829,13 @@ svg.menu-icon-house {
 .post-card {
   position: relative;
 }
+/* Increase the vertical space between post-cards */
+.post-card:after {
+  content: "";
+  display: block;
+  margin-top: 5px;
+}
+
 .post-card-image {
   display: block;
   width: 100%;
