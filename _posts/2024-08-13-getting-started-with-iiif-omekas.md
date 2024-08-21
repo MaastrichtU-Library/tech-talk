@@ -112,7 +112,7 @@ docker compose logs -f
 ```
 
 There are some manual configuration steps to perform after the Docker containers have started.
-- [Configure Solr backend](README-02-Solr.md)
+- [Configure Solr backend](https://github.com/MaastrichtU-Library/omekas-docker/blob/master/README-02-Solr.md)
 
 When all containers have started, you will find the services at the following URLs:
 - **Omeka S:** http://omeka.local _(usr/pwd: admin@example.org / foobar)_
