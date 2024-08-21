@@ -828,12 +828,8 @@ svg.menu-icon-house {
 
 .post-card {
   position: relative;
-}
-/* Increase the vertical space between post-cards */
-.post-card:after {
-  content: "";
-  display: block;
-  margin-top: 5px;
+  margin-right: 5px;  /* inserts horizontal white space */
+  margin-bottom: 5px; /* inserts vertical white space */
 }
 
 .post-card-image {
