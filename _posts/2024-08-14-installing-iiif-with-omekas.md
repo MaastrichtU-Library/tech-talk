@@ -24,9 +24,9 @@ the scale we're using Omeka S on).
 
 Our chosen architecture looks as follows:
 
-![architecture 1](../assets/img/posts/iiif-architecture-1-web.jpg)
+![architecture 1](assets/img/posts/iiif-architecture-1-web.jpg)
 
-![architecture 2](../assets/img/posts/iiif-architecture-2-web.jpg)
+![architecture 2](assets/img/posts/iiif-architecture-2-web.jpg)
 
 This blog describes the actions to take to get this architecture installed on your Omeka S production environment.
 
