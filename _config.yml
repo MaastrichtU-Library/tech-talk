@@ -5,7 +5,7 @@ description: >  # this character allows multiline input
 baseurl: "/" # the subpath of your site, e.g. /blog
 permalink: ':title:output_ext'
 url: "https://maastrichtu-library.github.io/tech-talk" # the base hostname & protocol for your site, e.g. http://example.com
-logo: "/assets/img/branding/UM-logo-light.svg"
+logo: "/assets/img/branding/UB-logo-light.png"
 logo-icon: "/assets/img/branding/UM-symbol-dark.png"
 logo-icon-SEO: "/assets/img/branding/UM-symbol-light.png" # must be a non SVG file
 
@@ -21,7 +21,7 @@ logo-icon-SEO: "/assets/img/branding/UM-symbol-light.png" # must be a non SVG fi
 # the browser is closed or not)
 night_mode: "auto"
 
-logo-dark: "/assets/img/branding/UM-logo-dark.png"
+logo-dark: "/assets/img/branding/UB-logo-dark.png"
 highlight_theme: syntax-base16.solarized.dark # select a dark theme for the code highlighter if needed
 
 # Author settings
