@@ -44,8 +44,6 @@ Other operating systems and versions are supported as well, but not described in
 
 ### Install general software packages
 First, install the required software via the Ubuntu package manager.
-`libfreetype6-dev` is a dependency for the gd graphics processing library that Omeka S uses as PHP extension.
-The other ones are dependencies for other PHP extensions that Omeka S uses for compression or image processing.
 ```bash
 sudo apt-get install \
     libfreetype6-dev \
@@ -54,13 +52,16 @@ sudo apt-get install \
     libjpeg-dev \
     libtiff-dev
 ```
+`libfreetype6-dev` is a dependency for the gd graphics processing library that Omeka S uses as PHP extension.
+The other ones are dependencies for other PHP extensions that Omeka S uses for compression or image processing.
+
 
 ### JPEG 2000 compatibility
 The default ImageMagick version in Ubuntu 20.04 lacks jp2 support, so we need to compile and install specific versions of
 ImageMagick, libvips and libopenjp2 to make it work. 
 
 **If you're using Debian or a higher version of Ubuntu**, you might be able to install the versions from your OS's package
-manager directly and can probably continue with the next section **Configure Apache and PHP**.
+manager directly and can probably continue with the next section called **'Configure Apache and PHP'**.
 
 #### 1. Imagemagick
 Build ImageMagick with JP2 support:
@@ -113,7 +114,7 @@ dpkg --list | grep libopenjp2
 #### 3. libvips
 libvips is a fast image processing library with low memory needs ([website](https://www.libvips.org/)). The version
 offered by the Ubuntu 20.04 package repos is not compatible with the ImageMagick version we installed above, so we need
-to build it from source ourselves. 
+to build it from source. 
 
 Compiling and
 building this package is rather complex, so we're happy to offer you a .deb package we compiled ourselves.
@@ -179,7 +180,7 @@ Restart the Apache web server
 sudo systemctl restart apache2
 ```
 
-In order to prevent errors like 'CSRF: Value is required and can't be empty' when editing Omeka S items consisting of many
+In order to prevent errors like _'CSRF: Value is required and can't be empty'_ when editing Omeka S items that consist of many
 media files, you need to increase maximum allowed input.
 
 Edit the file `/etc/php/8.2/fpm/conf.d/99-omeka.ini` and insert the following
@@ -208,10 +209,10 @@ This module implements the [IIIF Content Search API](https://iiif.io/api/)
 [**UniversalViewer**](https://github.com/Daniel-KM/Omeka-S-module-UniversalViewer/releases) version 3.6.9 as the IIIF-
 compliant image viewer.
 
-**Remark**. Please be aware that this is a proven and working combination of module versions. Deviating from these
-versions might result in broken functionality. For instance, version 3.6.18 of IiifServer is known to break the
+**Remark**. Please be aware that the above is a proven and working combination of module versions. Deviating from these
+versions might result in broken functionality. For instance, IiifServer version 3.6.18 is known to break  
 Mirador's OCR helper plugin and versions 3.6.19 and 3.6.20 break IiifSearch functionality. Other "golden combinations"
-might exist and we hope that these bugs appear less in future versions of these modules.
+might exist and we hope that these strict dependencies die off in future versions of these modules.
 
 
 ### Configuration in Omeka S
@@ -219,7 +220,8 @@ Some settings have to be made in Omeka S to make everything run smoothly. Login 
 navigate to the following sections.
 
 **Site settings**
-Repeat this for every site in your Omeka S instance
+
+_Repeat this for every site in your Omeka S instance_
 - Uncheck “Show - Embed media on item pages (legacy)”
 - Enable the following plugins at “Players - Mirador plugins for v3“:
   - Download files 
@@ -254,14 +256,14 @@ Repeat this for every site in your Omeka S instance
 
 
 ### Final words
-Following this extensive manual has hopefully resulted in a working IIIF-OmekaS instance. Now you can start your 
+Following this extensive manual has hopefully resulted in a working IIIF-Omeka S instance. Now you can start your 
 IIIF-journey by creating new items in Omeka S and uploading image files to it. The IIIF-manifests will be populated with
 the item- and media-metadata you enter in Omeka S. Mirador or Universal will render the images you've attached to the item.
 
 Good luck and have fun! 
 
-Some sample URLs:
-- Frontend view: https://digitalcollections.library.maastrichtuniversity.nl/s/medicine/item/3525
-- IIIF manifest: https://digitalcollections.library.maastrichtuniversity.nl/iiif/2/3525/manifest
-
 ![herbarius](assets/img/posts/herbarius-web.jpg)
+
+Some sample URLs:
+- Frontend view: [https://digitalcollections.library.maastrichtuniversity.nl/s/medicine/item/3525](https://digitalcollections.library.maastrichtuniversity.nl/s/medicine/item/3525)
+- IIIF manifest: [https://digitalcollections.library.maastrichtuniversity.nl/iiif/2/3525/manifest](https://digitalcollections.library.maastrichtuniversity.nl/iiif/2/3525/manifest)
