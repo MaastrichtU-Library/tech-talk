@@ -2,7 +2,7 @@
 layout: post
 read_time: true
 show_date: true
-title: Getting started with IIIF and Omeka S (DRAFT)
+title: Getting started with IIIF and Omeka S
 description: How to get Omeka S and IIIF running with Docker
 date: 2024-08-13
 img: posts/docker-omekas-iiif.jpg

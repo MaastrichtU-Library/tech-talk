@@ -2,7 +2,7 @@
 layout: post
 read_time: true
 show_date: true
-title: UM Library participates in NDE Versnellen 2023 (DRAFT)
+title: UM Library participates in NDE Versnellen 2023
 description: NDE Versnellen 2023 call for proposals
 date: 2024-08-12
 img: posts/nde-versnellen.png
