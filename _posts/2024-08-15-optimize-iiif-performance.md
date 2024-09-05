@@ -84,7 +84,7 @@ cores. Subsequently, we've repeated the same tests with 8 and 16 cores.
 The results are shown in the figure below. On average, 8 CPU cores load a page 31.3% (8 cores) and 36.5% faster 
 (16 cores) compared to 4 cores when tested with these file types. We expect that adding more cores will increase performance
 even further, although the gain per added core will be less.
-![]("assets/img/posts/testing-cpu-cores.png)
+![effect of cpu cores]("assets/img/posts/testing-cpu-cores.png")
 
 
 ## TODO: Save disk space and increase page load performance by using JPG compressed source images
