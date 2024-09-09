@@ -48,7 +48,7 @@ discus_identifier:  # Add your discus identifier
 comments_curtain: yes # leave empty to show the disqus embed directly
 
 # Tracker
-analytics:
+analytics: G-353C3SS5DN
 fbadmin:
 
 # Paginate
