@@ -10,8 +10,13 @@ tags: [ omeka s, iiif ]
 author: Maarten Coonen
 ---
 
-Running Omeka S with the IIIF modules configured on a machine with average hardware leads to a workable situation in most cases. 
-However, there are some things you need to know in order to make your user's experience much better. 
+Running Omeka S with the IIIF modules configured on a machine with average hardware leads to a workable situation in most cases.
+In order to make your user's experience much better, there are a few optimizations which will be described in detail below: 
+
+- Boost image processing performance with vips
+- Choose "Tiled tiff" as tiling method
+- Increase page load performance with parallel processing
+- Save disk space and increase page load performance by using JPG compressed source images
 
 
 ## Boost image processing performance with vips
@@ -22,7 +27,7 @@ most Linux distributions. The [ImageServer module](https://omeka.org/s/modules/I
 [**vips** image processor](https://www.libvips.org/), as this one is much faster.
 
 Our benchmarks confirm that vips is blazingly fast. Processing a 127 MB TIF file during upload on our test Omeka S system
-took 15 minutes with Imagemagick and only 1 second with vips! With the JPEG 2000 format the difference is even more extreme:
+took 15 minutes with Imagemagick and only 1 second with vips! With the JPEG2000 format the difference is even more extreme:
 44 minutes with Imagemagick vs. 1 second with vips.
 As one can imagine, these reductions in processing time greatly enhance the productivity of collection managers working
 with the system. 
@@ -77,7 +82,7 @@ serving the image tiles to the user requesting it. This greatly enhances perform
 Modern data centers run virtualized servers and allow you to increase the amount of CPU cores with the click of a
 button, as long as you continue to pay your bills. Virtualized cores cost money as well!
 
-We've conducted a series of tests with various source file types (JP2000, TIFF, JPG compression quality 80 (JPGq80) and
+We've conducted a series of tests with various source file types (JPEG2000, TIFF, JPG compression quality 80% (JPGq80) and
 JPG compression quality 40 (JPGq40)) to determine the optimal amount of CPU cores. Our base line tests were run on 4 CPU
 cores. Subsequently, we've repeated the same tests with 8 and 16 cores.
 
@@ -87,10 +92,24 @@ even further, although the gain per added core will be less.
 ![effect of cpu cores](assets/img/posts/testing-cpu-cores.png)
 
 
-## TODO: Save disk space and increase page load performance by using JPG compressed source images
-tiled tiff from jp2 processed again by vips at page load. WE don't see this with other formats. This is why jp2 performs least.
-TIFF format loads fastest, but takes a lot of disk space.
-JPGq80 is the best compromise
+## Save disk space and increase page load performance by using JPG compressed source images
+From the paragraph on tiling methods above we know that all source image file types are converted to the pyramidal TIFF
+format before they will be shown in the IIIF-compliant viewer at page load. Surprisingly, we observed differences in page
+load performance depending on the source file type used. 
+
+We found that tiled TIFFs that originated from JPEG2000 source files cause significantly more CPU-usage at page load compared 
+to other file formats. Since the 'vips' process is the main cause for this, we assume that "JPEG2000-to-TIFF" files are 
+tiled again at page load, which decreases performance. 
+We did not observe this high CPU-load when loading pages with "TIFF-to-TIFF" or "JPG-to-TIFF"-tiled files in the viewer.
+
+Although "TIFF-to-TIFF" tiled images load the fastest (see bar charts in previous paragraph on parallel processing), there is a 
+downside on the amount of disk space that they consume. When considering total disk space usage, we found that the "JPG-to-TIFF"
+tiling workflow uses just 10% of disk space compared to "TIFF-to-TIFF". This difference is mainly due to the storage of the 
+(uncompressed) TIFF source files in the `original/` sub folders.
+
+Since the viewing quality of the "JPG-to-TIFF"-tiled images is similar for the human eye, the page loading
+performance is only slightly less and the disk space used is a fraction of the "TIFF-to-TIFF" workflow, we recommend 
+you to apply JPG-compression to the source images by converting them to JPG (quality 80%) before uploading them to Omeka S.
 
 
 ## Conclusion
@@ -105,3 +124,4 @@ Our preferred setup consists of a machine with the characteristics below.
 - Image processing: vips 8.14.1 or higher & Imagemagick 6.9.11 (with jp2 extension enabled) or higher
 - Omeka S module Image server - Image processor: Automatic (Vips when possible, ... (etc.))
 - Omeka S module Image server - tiling type: Tiled tiff
+- Source image format: JPG compressed 80%
