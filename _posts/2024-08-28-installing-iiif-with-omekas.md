@@ -4,7 +4,7 @@ read_time: true
 show_date: true
 title: Installing IIIF to Omeka S
 description: How to get Omeka S and IIIF running in production
-date: 2024-08-14
+date: 2024-08-28
 img: posts/installing-omekas-iiif.jpg
 tags: [ omeka s, iiif ]
 author: Maarten Coonen

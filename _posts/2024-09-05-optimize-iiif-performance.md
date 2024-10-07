@@ -4,7 +4,7 @@ read_time: true
 show_date: true
 title: Power up! Optimize IIIF user experience
 description: Configuration settings for a well performant IIIF user experience with Omeka S 
-date: 2024-08-15
+date: 2024-09-05
 img: posts/power-up-web.jpg
 tags: [ omeka s, iiif ]
 author: Maarten Coonen

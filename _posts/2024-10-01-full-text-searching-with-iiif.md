@@ -4,7 +4,7 @@ read_time: true
 show_date: true
 title: Full text searching with IIIF
 description: Configure Omeka S and IIIF to search and highlight full texts extracted from images
-date: 2024-08-19
+date: 2024-10-01
 img: posts/searching-full-text-web.jpg
 tags: [ omeka s, iiif, docker ]
 author: Maarten Coonen

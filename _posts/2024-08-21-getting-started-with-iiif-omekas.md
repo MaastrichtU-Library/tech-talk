@@ -4,7 +4,7 @@ read_time: true
 show_date: true
 title: Getting started with IIIF and Omeka S
 description: How to get Omeka S and IIIF running with Docker
-date: 2024-08-13
+date: 2024-08-21
 img: posts/docker-omekas-iiif.jpg
 tags: [ omeka s, iiif, docker ]
 author: Maarten Coonen
