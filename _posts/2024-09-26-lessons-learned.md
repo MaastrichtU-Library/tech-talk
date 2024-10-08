@@ -4,7 +4,7 @@ read_time: true
 show_date: true
 title: IIIF and Omeka S - Lessons Learned
 description: Lessons learned during Maastricht University Library's implementation of IIIF in Omeka S
-date: 2024-09-19
+date: 2024-09-26
 img: posts/lessons-learned-web.jpg
 tags: [ omeka s, iiif ]
 author: Maryam Mazaheri

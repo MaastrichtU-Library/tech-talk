@@ -3,8 +3,8 @@ layout: post
 read_time: true
 show_date: true
 title: Choosing an IIIF-Compliant Image Viewer - Mirador vs. Universal Viewer
-description: TODO
-date: 2024-09-26
+description: When integrating IIIF capabilities into our Omeka S environment, we needed to choose the right viewer to ensure optimal user experience for accessing digital collections. After extensive testing of the available options, we selected Mirador over Universal Viewer for a number of compelling reasons.
+date: 2024-09-19
 img: posts/choosing-iiif-viewer-web.jpg
 tags: [ omeka s, iiif ]
 author: Maryam Mazaheri
