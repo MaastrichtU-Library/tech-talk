@@ -17,6 +17,9 @@ permalink: about:output_ext
     </section>
     <section class="about-body">
       <ul class="contact-list">
+      {% if site.website %}
+        <li class="website"><a class="website" href="{{site.website}}" target="_blank"><i class="fa-solid fa-globe"></i></a></li>
+      {% endif %}
       {% if site.facebook %}
         <li class="facebook"><a class="facebook" href="https://facebook.com/{{site.facebook}}" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
       {% endif %}
@@ -29,7 +32,7 @@ permalink: about:output_ext
       {% if site.twitter %}
         <li class="twitter"><a class="twitter" href="https://x.com/{{site.twitter}}" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
       {% endif %}
-      {% if site.twitter %}
+      {% if site.youtube %}
         <li class="youtube"><a class="youtube" href="https://www.youtube.com/channel/{{site.youtube}}" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
       {% endif %}
       {% if site.github %}
