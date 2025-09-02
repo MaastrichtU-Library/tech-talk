@@ -38,7 +38,7 @@ The concept consists of five key aspects:
    image collections.
 
 The Dutch Digital Heritage Network is supporting heritage organisations to move to NDE compatible systems with their
-subsidy program called [NDE Versnellen](Dutch Digital Heritage Network). Maastricht University Library participated in
+subsidy program called [NDE Versnellen](https://netwerkdigitaalerfgoed.nl/versnellen-2024/). Maastricht University Library participated in
 this call for proposals in 2023 with a project to implement IIIF functionalities on top of their Omeka S instance and 
 becoming fully NDE-compliant.
 
